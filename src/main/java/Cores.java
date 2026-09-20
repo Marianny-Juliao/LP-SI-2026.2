@@ -2,14 +2,11 @@ import java.util.Scanner;
 public class Cores {
     public static void main (String [] args){
         String[] cores = new String[11];
-        Scanner scanner = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in);
         for (int k=0; k< 11; k++){
             System.out.println("Escolha uma cor entre azul e rosa: ");
-            String corEscolhida = scanner .nextLine();
+            String corEscolhida = entrada .nextLine();
             cores[k] = corEscolhida;
-
-
-
         }
         int corRosa = 0;
         int corAzul = 0;
@@ -18,17 +15,14 @@ public class Cores {
           corAzul += 1;
       }else {
           corRosa += 1;
-
       }
         }
     if(corRosa >corAzul){
-     System.out.println("A cor Rosa é maior!");
-
+     System.out.println("A cor que mais aparece é Rosa!");
     }else{
-        System.out.println("A cor Azul é maior!");
+        System.out.println("A cor que mais aparece é Azul!");
     }
-
-        scanner.close();
+        entrada.close();
     }
 
 }
