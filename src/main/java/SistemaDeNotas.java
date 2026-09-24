@@ -31,12 +31,11 @@ public class SistemaDeNotas {
             }
 
 
-
         }
 
         System.out.printf("A maior nota é %.2f de %s\n ", maiorNota, maiorNome);
         System.out.printf("Quantidade de notas baixas é %d\n", alunosComNotasBaixas);
-        System.out.println("Fim do programa");
+        System.out.println("Fim do programa!");
         leitor.close();
     }
 
