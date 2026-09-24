@@ -30,6 +30,7 @@ public class Adivimha {
 
             }
             System.out.printf("Seus pontos finais são: %d\n", pontos);
+            System.out.println("Até a próxima");
             leitor.close();
         }
 
