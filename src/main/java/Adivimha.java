@@ -22,14 +22,14 @@ public class Adivimha {
             } else if (numLido != y) {
                 pontos = pontos - 2;
                 if (y > numLido) {
-                    System.out.println("O número é um pouco maior do que este!");
+                    System.out.println("O número é um pouco maior do que este, tente novamente!");
                 } else {
-                    System.out.println("O número é um pouco menor do que este!");
+                    System.out.println("O número é um pouco menor do que este, tente novamente!");
                 }
             }
 
             }
-            System.out.printf("Seus pontos finais são %d\n", pontos);
+            System.out.printf("Seus pontos finais são: %d\n", pontos);
             leitor.close();
         }
 
