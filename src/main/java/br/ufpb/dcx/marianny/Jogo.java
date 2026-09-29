@@ -1,4 +1,4 @@
-package br.ufpb.dcx.marianny.jogos;
+package br.ufpb.dcx.marianny;
 
 public class Jogo{
     private String nomeTime1;
