@@ -1,4 +1,4 @@
-package br.ufpb.dcx.marianny;
+package br.ufpb.dcx.marianny.Agenda;
 
 import javax.swing.JOptionPane;
 

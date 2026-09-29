@@ -1,9 +1,10 @@
-package br.ufpb.dcx.marianny;
+package br.ufpb.dcx.marianny.Agenda;
+
 public class AgendaEnderecos {
 
     private int maxContatos;
     private int contContatos;
-    private Contato [] contatos;
+    private Contato[] contatos;
 
     public AgendaEnderecos(int maxContatos) {
         this.maxContatos = maxContatos;

@@ -1,4 +1,5 @@
-package br.ufpb.dcx.marianny;
+package br.ufpb.dcx.marianny.Agenda;
+
 public class Contato {
     private String nome;
     private Endereco endereco;

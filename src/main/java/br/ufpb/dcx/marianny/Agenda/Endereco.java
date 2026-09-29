@@ -1,4 +1,4 @@
-package br.ufpb.dcx.marianny;
+package br.ufpb.dcx.marianny.Agenda;
 public class Endereco {
     private String logradouro;
     private String numero;
