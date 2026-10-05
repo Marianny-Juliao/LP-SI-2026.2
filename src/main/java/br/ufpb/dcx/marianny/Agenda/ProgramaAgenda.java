@@ -12,15 +12,17 @@ public class ProgramaAgenda {
                     "Digite uma opção:\n1.Cadastrar contato\n"
                             +"2.Pesquisa endereço\n"
                             + "3.Pesquisa número de contatos do bairro\n"
-                            + "4.Apaga contato\n5.Sair\n"));
+                            + "4.Apaga contato\n "+"5.Pesquisa E-mail\n" +"6.Sair\n"));
             switch(opcao) {
                 case 1:
                     String nome = JOptionPane.showInputDialog("Qual o nome?");
+                    String email = JOptionPane.showInputDialog("Qual o E-mail?");
                     String logradouro = JOptionPane.showInputDialog("Qual o logradouro (Rua, Av...)?");
                     String numero = JOptionPane.showInputDialog("Qual o número?");
                     String bairro = JOptionPane.showInputDialog("Qual o bairro?");
                     Endereco end = new Endereco(logradouro,numero,bairro,"João Pessoa","Paraíba");
-                    Contato c = new Contato(nome, end);
+                    Contato c = new Contato(nome, end,email );
+
                     agenda.cadastraContato(c);
                     break;
                 case 2:
@@ -47,6 +49,15 @@ public class ProgramaAgenda {
                     }
                     break;
                 case 5:
+                    String nomeEmail = JOptionPane.showInputDialog("Qual o E-mail?");
+                    Endereco emailAchado = agenda.pesquisaEndereco(nomeEmail);
+                    if (emailAchado!=null) {
+                        JOptionPane.showMessageDialog(null, emailAchado.toString());
+                    } else {
+                        JOptionPane.showMessageDialog(null, "E-mail não encontrado");
+                    }
+                    break;
+                case 6:
                     sair = true;
                     break;
             }
