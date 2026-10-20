@@ -11,19 +11,24 @@ public class Pessoa {
 
     }
     public String getNome(){
+
         return this.nome;
     }
 
     public int getIdade(){
+
         return this.idade;
     }
     public void setNome(String novoNome){
+
         this.nome = novoNome;
     }
     public void setIdade(int novaIdade){
+
         this.idade = novaIdade;
     }
     public String toString(){
+
         return this.nome + " tem " + this.idade + " anos";
     }
 

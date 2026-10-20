@@ -8,15 +8,19 @@ public class Produto {
         this.preco = preco;
     }
     public Produto() {
+
         this("",0.0);
     }
     public String getNome() {
+
         return this.nome;
     }
     public void setNome(String nome) {
+
         this.nome = nome;
     }
     public double getPreco() {
+
         return this.preco;
     }
     public void setPreco(double preco) {
