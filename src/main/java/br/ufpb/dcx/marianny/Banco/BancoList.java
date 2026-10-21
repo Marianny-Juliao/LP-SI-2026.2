@@ -17,12 +17,15 @@ public class BancoList {
         return "Banco " + this.nome + " de CNPJ " + this.cnpj + " e que tem " + this.contas.size() + " contas";
     }
 
-    public void transferir(String numContaO, String numAgO, String numContaD, String numAgenciaD, double valor) {
-        // TODO: IMPLEMENTAR
+    public void transferir(String numContaO, String numAgenciaO, String numContaD, String numAgenciaD, double valor) {
+
     }
 
     public void abrirConta(String cpfTitular, String numConta, String numAgencia, double saldoInicial) {
-        // TODO: IMPLEMENTAR
+
+       Conta novaConta = new Conta (cpfTitular,numConta,numAgencia,saldoInicial);
+       this.contas.add(novaConta);
+
     }
 
     public ArrayList<Conta> pesquisarContasComSaldoNegativo() {
@@ -43,15 +46,36 @@ public class BancoList {
             }
         }
         return saldo;
-    }// ...
+    }
 
     public double sacarDeConta(String numConta, String numAgencia, double valor) {
-        // TODO: IMPLEMENTAR
+        for (Conta c : this.contas) {
+            if (numConta.equals(c.getNumeroConta()) && numAgencia.equals(c.getNumeroAgencia())) {
+                if (c.getSaldo() >= valor) {
+                    double novoSaldo = c.debitar(valor);
+                    return novoSaldo;
+                }else{
+                    return c.getSaldo();
+                }
+
+
+            }
+        }
         return 0.0;
     }
 
     public double depositarEmConta(String numConta, String numAgencia, double valor) {
-        // TODO: IMPLEMENTAR
+        for (Conta c : this.contas) {
+            if (numConta.equals(c.getNumeroConta()) && numAgencia.equals(c.getNumeroAgencia())) {
+                    double novoSaldo = c.creditar(valor);
+                    return novoSaldo;
+
+
+
+            }
+
+
+        }
         return 0.0;
     }
 

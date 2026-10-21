@@ -1,6 +1,6 @@
 package br.ufpb.dcx.marianny.Banco;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.testng.AssertJUnit.assertEquals;
 

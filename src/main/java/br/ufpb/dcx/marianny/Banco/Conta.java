@@ -58,8 +58,9 @@ public class Conta {
         }
 
         public double debitar(double valor) {
-            // TODO: IMPLEMENTAR
-            return 0.0;
+            double novoSaldo = getSaldo()- valor;
+            setSaldo(novoSaldo);
+            return novoSaldo;
         }
 
         public void setSaldo(double saldo) {
