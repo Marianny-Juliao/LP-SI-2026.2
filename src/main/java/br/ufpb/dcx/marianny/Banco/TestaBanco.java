@@ -17,6 +17,14 @@ public class TestaBanco {
         String numAgencia = entrada.nextLine();
         System.out.println("Qual o valor inicial da cont (ex: xxx-x) ?");
         Double saldo = Double.parseDouble(entrada.nextLine());
+       meuBanco.abrirConta(cpf,numConta,numAgencia, saldo);
+       meuBanco.transferir("222-2", "333-3", numConta, numAgencia, 100);
+        System.out.println(meuBanco.consultarSaldoDeConta(numConta,numAgencia));
+        for(Conta c: meuBanco.pesquisarContasComSaldoNegativo()) {
+            System.out.println(c);
+        }
+
+
 
 
 
