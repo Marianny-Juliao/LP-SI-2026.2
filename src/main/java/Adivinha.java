@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Adivimha {
+public class Adivinha {
     public static int sorteiaNumeroInteiro(int maximo) {
         int x = (int) (Math.random() * (maximo + 1)); //gera número inteiro aleatório entre [0-maximo]
         return x;
