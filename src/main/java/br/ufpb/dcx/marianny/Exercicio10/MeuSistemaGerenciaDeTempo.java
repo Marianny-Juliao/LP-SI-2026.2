@@ -6,15 +6,19 @@ import java.util.List;
 
 
 
-public class MeuSistemaGerenciaDeTempo implements SistemaGerenciaDeTempo{
+public class MeuSistemaGerenciaDeTempo implements SistemaGerenciaDeTempo {
     private List<Tarefa> tarefas;
 
 
-    public MeuSistemaGerenciaDeTempo(){
+    public MeuSistemaGerenciaDeTempo() {
         this.tarefas = new ArrayList<>();
     }
 
 
+    @Override
+    public void cadastrarTarefa(String descricao, String categoria, int tempoEmMinutos) {
+
+    }
 
     public List<Tarefa> pesquisarTarefasDaCategoria(String categoria) {
         List<Tarefa> tarefasPesq = new ArrayList<>();
@@ -24,5 +28,26 @@ public class MeuSistemaGerenciaDeTempo implements SistemaGerenciaDeTempo{
             }
         }
         return tarefasPesq;
-    }//… Outros métodos da classe
+    }
+
+    @Override
+    public List<Tarefa> pesquisarTarefasQueDuraramMaisDe(int tempoEmMinutos) {
+        return List.of();
+    }
+
+    @Override
+    public int calcularTempoTotalDeTarefasDaCategoria(String categoriaTarefa) {
+        return 0;
+    }
+
+    @Override
+    public int calcularTempoTotalDeTarefasComDescricao(String descricaoTarefa) {
+        return 0;
+    }
+
+    @Override
+    public List<Tarefa> pesquisarTarefasPorDescricao(String descricao) {
+        return List.of();
+    }
+}
 
