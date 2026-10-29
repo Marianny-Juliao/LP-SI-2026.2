@@ -1,5 +1,7 @@
 package br.ufpb.dcx.marianny.Exercicio10;
 
+import br.ufpb.dcx.marianny.Banco.Conta;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +18,9 @@ public class MeuSistemaGerenciaDeTempo implements SistemaGerenciaDeTempo {
 
 
     @Override
-    public void cadastrarTarefa(String descricao, String categoria, int tempoEmMinutos) {
+    public void cadastrarTarefa(String descricao, String categoria, int tempoEmMinutos, int tempoCategoriaEmMinutos) {
+        Tarefa tarefa = new Tarefa (descricao, categoria, tempoEmMinutos,tempoCategoriaEmMinutos);
+        this.tarefas.add(tarefa);
 
     }
 
@@ -37,7 +41,13 @@ public class MeuSistemaGerenciaDeTempo implements SistemaGerenciaDeTempo {
 
     @Override
     public int calcularTempoTotalDeTarefasDaCategoria(String categoriaTarefa) {
-        return 0;
+        int contTempoCategoria = 0;
+        for (Tarefa c :this.tarefas){
+            if (c.getCategoria().equals(categoriaTarefa)){
+                contTempoCategoria += c.tempoCategoriaEmMinutos();
+            }
+        }
+        return contTempoCategoria;
     }
 
     @Override
